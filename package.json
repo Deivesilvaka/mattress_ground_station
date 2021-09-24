@@ -1,0 +1,24 @@
+{
+  "name": "mattress_ground_station",
+  "version": "1.0.0",
+  "description": "Mattress Space ground station telemetry system ",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx nodemon index.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Deivesilvaka/mattress_ground_station.git"
+  },
+  "author": "Deivesilvaka",
+  "license": "Apache License 2.0",
+  "bugs": {
+    "url": "https://github.com/Deivesilvaka/mattress_ground_station/issues"
+  },
+  "homepage": "https://github.com/Deivesilvaka/mattress_ground_station#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "socket.io": "^4.2.0"
+  }
+}
