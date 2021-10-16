@@ -3,12 +3,14 @@ const flightDatas = {
     rocketVelocity: {
         x: [],
         y: [],
-        mode: "lines"
+        z: [],
+        time: []
     },
     rocketOrientation: {
         x: [],
         y: [],
-        mode: "lines"
+        z: [],
+        time: []
     }
 }
 
