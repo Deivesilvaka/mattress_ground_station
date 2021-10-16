@@ -1,0 +1,53 @@
+
+.container {
+    margin-right: 0px;
+    margin-top: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+#log{
+    position: absolute;
+    margin-top: 100px;
+    align-self: center;
+    margin-left: 43%;
+}
+
+.header {
+    height: 70px;
+    width: 99%;
+    background-color: black;
+    border: 1px solid red;
+}
+
+.header p {
+    margin-left: 35%;
+    margin-top: 18px;
+    font-size: 30px;
+    font-weight: bold;
+    color: cornsilk;
+}
+
+.telemetry {
+    width: 99%;
+    top: 5px
+}
+
+.chart {
+    width: 500px;
+    margin-top: 7%;
+    height: 375px;
+    float: left;
+}
+
+.logo {
+    width: 200px;
+    margin-top: 7%;
+    height: 375px;
+    float: left;
+}
+
+img {
+    width: 100%;
+    margin-top: 85px;
+}
