@@ -7,19 +7,19 @@ async function createCharts() {
         }
 
         const xVelocity = {
-            x: flightDatas.rocketVelocity.time,
+            x: flightDatas.time,
             y: flightDatas.rocketVelocity.x,
             name: "xVelocity"
         }
 
         const yVelocity = {
-            x: flightDatas.rocketVelocity.time,
+            x: flightDatas.time,
             y: flightDatas.rocketVelocity.y,
             name: "yVelocity"
         }
 
         const zVelocity = {
-            x: flightDatas.rocketVelocity.time,
+            x: flightDatas.time,
             y: flightDatas.rocketVelocity.z,
             name: "zVelocity"
         }
@@ -35,19 +35,19 @@ async function createCharts() {
         }
 
         const xOrientation = {
-            x: flightDatas.rocketOrientation.time,
+            x: flightDatas.time,
             y: flightDatas.rocketOrientation.x,
             name: "xOrientation"
         }
 
         const yOrientation = {
-            x: flightDatas.rocketOrientation.time,
+            x: flightDatas.time,
             y: flightDatas.rocketOrientation.y,
             name: "yOrientation"
         }
 
         const zOrientation = {
-            x: flightDatas.rocketOrientation.time,
+            x: flightDatas.time,
             y: flightDatas.rocketOrientation.z,
             name: "zOrientation"
         }

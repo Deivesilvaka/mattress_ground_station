@@ -17,6 +17,12 @@ function socketServer() {
             console.log(`socket ${socket.id} has been disconnected`)
         })
 
+        socket.on("teleData", (data) => {
+            sockets.emit("teleData", data)
+        })
+
+        socket.on("rocketConnected", id => sockets.emit("rocketConnected", id))
+
     })
 }
 
