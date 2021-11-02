@@ -22,16 +22,26 @@ socket.on("connect", () => {
 
 socket.on("teleData", (data) => {
 
-    flightDatas["rocketVelocity"].x.push(data["rocketVelocity"].x)
-    flightDatas["rocketVelocity"].y.push(data["rocketVelocity"].y)
-    flightDatas["rocketVelocity"].z.push(data["rocketVelocity"].z)
+    const { rocketVelocity, rocketOrientation } = data
 
-    flightDatas["rocketOrientation"].x.push(data["rocketOrientation"].x)
-    flightDatas["rocketOrientation"].y.push(data["rocketOrientation"].y)
-    flightDatas["rocketOrientation"].z.push(data["rocketOrientation"].z)
+    flightDatas["rocketVelocity"].x.push(rocketVelocity["x"])
+    flightDatas["rocketVelocity"].y.push(rocketVelocity["y"])
+    flightDatas["rocketVelocity"].z.push(rocketVelocity["z"])
+
+    flightDatas["rocketOrientation"].x.push(rocketOrientation['x'])
+    flightDatas["rocketOrientation"].y.push(rocketOrientation['y'])
+    flightDatas["rocketOrientation"].z.push(rocketOrientation['z'])
 
     flightDatas["time"].push(flightDatas.time.length + 0.100)
     createCharts()
 })
 
-socket.on("rocketConnected", id => setLog("The Rocket has been connected!"))
+socket.on("rocketConnected", id => {
+    //document.querySelector("#downloadButton").style.display = "none"
+    setLog("The Rocket has been connected!")
+})
+
+socket.on("flightFinished", one => {
+    //document.querySelector("#downloadButton").style.display = "inline"
+    setLog("The Flight has been finished!")
+})

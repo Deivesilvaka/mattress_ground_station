@@ -57,7 +57,7 @@ async function createCharts() {
         await Plotly.newPlot("orientation", flightChart, layout)
     }
 
-    createVelocityChart()
-    createOrientationChart()
+    await createVelocityChart()
+    await createOrientationChart()
     
 }
