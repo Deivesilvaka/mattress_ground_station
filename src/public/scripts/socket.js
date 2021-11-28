@@ -13,6 +13,20 @@ const flightDatas = {
     time: []
 }
 
+const flightDatasChart = {
+    rocketVelocity: {
+        x: [],
+        y: [],
+        z: []
+    },
+    rocketOrientation: {
+        x: [],
+        y: [],
+        z: []
+    },
+    time: []
+}
+
 const socket = io()
 
 socket.on("connect", () => {
@@ -20,20 +34,12 @@ socket.on("connect", () => {
     createCharts()
 })
 
-socket.on("teleData", (data) => {
+socket.on("teleData", async (data) => {
 
-    const { rocketVelocity, rocketOrientation } = data
-
-    flightDatas["rocketVelocity"].x.push(rocketVelocity["x"])
-    flightDatas["rocketVelocity"].y.push(rocketVelocity["y"])
-    flightDatas["rocketVelocity"].z.push(rocketVelocity["z"])
-
-    flightDatas["rocketOrientation"].x.push(rocketOrientation['x'])
-    flightDatas["rocketOrientation"].y.push(rocketOrientation['y'])
-    flightDatas["rocketOrientation"].z.push(rocketOrientation['z'])
-
-    flightDatas["time"].push(flightDatas.time.length + 0.100)
-    createCharts()
+    await prepareDatas()
+    await setData(data)
+    await createCharts()
+    
 })
 
 socket.on("rocketConnected", id => {

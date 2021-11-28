@@ -1,10 +1,10 @@
 
 import express from 'express'
 import cors from 'cors'
-import router from './src/routes.mjs'
+import routes from './src/routes.mjs'
 import http from "http"
 import { Server } from "socket.io"
-const { routes, setSockets } = router
+import socketServer from './src/socketServer/socketServer.mjs'
 
 const app = express()
 
@@ -20,7 +20,11 @@ const sockets = new Server(server, {
 app.use(cors())
 app.use(express.static('./src/public'))
 app.use(express.json())
-setSockets(sockets)
+
+//Levando o servidor de websockets para o controller.
+socketServer(sockets)
+
+//Define as rotas
 app.use(routes)
 
 server.listen(process.env.PORT || 3000, () => console.log("rodando server"))

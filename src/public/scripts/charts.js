@@ -7,21 +7,24 @@ async function createCharts() {
         }
 
         const xVelocity = {
-            x: flightDatas.time,
-            y: flightDatas.rocketVelocity.x,
-            name: "xVelocity"
+            x: flightDatasChart.time,
+            y: flightDatasChart.rocketVelocity.x,
+            name: "xVelocity",
+            mode: "lines"
         }
 
         const yVelocity = {
-            x: flightDatas.time,
-            y: flightDatas.rocketVelocity.y,
-            name: "yVelocity"
+            x: flightDatasChart.time,
+            y: flightDatasChart.rocketVelocity.y,
+            name: "yVelocity",
+            mode: "lines"
         }
 
         const zVelocity = {
-            x: flightDatas.time,
-            y: flightDatas.rocketVelocity.z,
-            name: "zVelocity"
+            x: flightDatasChart.time,
+            y: flightDatasChart.rocketVelocity.z,
+            name: "zVelocity",
+            mode: "lines"
         }
 
         const flightChart = [ xVelocity, yVelocity, zVelocity ]
@@ -35,21 +38,24 @@ async function createCharts() {
         }
 
         const xOrientation = {
-            x: flightDatas.time,
-            y: flightDatas.rocketOrientation.x,
-            name: "xOrientation"
+            x: flightDatasChart.time,
+            y: flightDatasChart.rocketOrientation.x,
+            name: "xOrientation",
+            mode: "lines"
         }
 
         const yOrientation = {
-            x: flightDatas.time,
-            y: flightDatas.rocketOrientation.y,
-            name: "yOrientation"
+            x: flightDatasChart.time,
+            y: flightDatasChart.rocketOrientation.y,
+            name: "yOrientation",
+            mode: "lines"
         }
 
         const zOrientation = {
-            x: flightDatas.time,
-            y: flightDatas.rocketOrientation.z,
-            name: "zOrientation"
+            x: flightDatasChart.time,
+            y: flightDatasChart.rocketOrientation.z,
+            name: "zOrientation",
+            mode: "lines"
         }
 
         const flightChart = [ xOrientation, yOrientation, zOrientation ]
